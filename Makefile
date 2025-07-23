@@ -10,7 +10,7 @@ RM = rm -f
 
 SRCS = $(wildcard *.c)
 
-OBJS = $(SRCS:.c:.o)
+OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
@@ -24,7 +24,7 @@ clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-		$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
