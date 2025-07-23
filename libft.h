@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 17:40:33 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/23 16:08:16 by jcopari-         ###   ########.fr       */
+/*   Created: 2025/07/23 16:06:14 by jcopari-          #+#    #+#             */
+/*   Updated: 2025/07/23 17:13:22 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
+//#ifndef LIBFT_H
 
-int	ft_isascii(int c)
-{
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
-}
+//#define	LIBFT_H
+

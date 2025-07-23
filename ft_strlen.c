@@ -6,13 +6,15 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 19:39:39 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/21 19:42:48 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/07/23 17:59:10 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strlen(char *str)
+#include "libft.h"
+
+int	ft_strlen(char *str)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
 	while (str[i])
