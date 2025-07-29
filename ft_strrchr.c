@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 17:03:42 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/28 17:32:06 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/07/29 19:30:57 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	const char		*ptr;
 	unsigned char	chr;

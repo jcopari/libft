@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/25 14:53:15 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/29 19:31:17 by jcopari-         ###   ########.fr       */
+/*   Created: 2025/07/28 18:26:47 by jcopari-          #+#    #+#             */
+/*   Updated: 2025/07/29 19:30:40 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//  The  memchr()  function  scans  the  initial n bytes of the memory area
+//	pointed to by s for the first instance of c.  Both c and the  bytes  of
+//	the memory area pointed to by s are interpreted as unsigned char.
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char		*ptr;
-	unsigned char	chr;
+	const unsigned char	*ptr;
+	unsigned char		chr;
+	size_t				i;
 
-	ptr = s;
+	i = 0;
+	ptr = (const unsigned char *) s;
 	chr = (unsigned char) c;
-	while (*ptr)
+	while (i < n)
 	{
 		if (*ptr == chr)
-			return ((char *)ptr);
+			return ((void *)ptr);
 		ptr++;
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)ptr);
-	else
-		return (NULL);
+	return (NULL);
 }
