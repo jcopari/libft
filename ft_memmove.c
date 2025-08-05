@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/01 18:55:30 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/08/05 16:10:24 by jcopari-         ###   ########.fr       */
+/*   Created: 2025/08/05 14:39:17 by jcopari-          #+#    #+#             */
+/*   Updated: 2025/08/05 15:42:11 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	unsigned char	*p_dest;
+	const char		*p_src;
+	size_t			i;
 
 	i = 0;
-
-	if (*little == '\0')
-		return ((char *)big);
-	while (big[i] && i < len)
+	p_dest = (unsigned char *)dest;
+	p_src = (const unsigned char *)src;
+	if (p_dest < p_src)
 	{
-		j = 0;
-		while (little[j] && big[i + j] && (i + j) < len && big[i + j] == little[j])
-			j++;
-		if (little[j] == '\0')
-			return ((char *)&big[i]);
-		i++;
+		while (i < n)
+		{
+			p_dest[i] = p_src[i];
+			i++;
+		}
 	}
-	return (NULL);
+	else if (p_dest > p_src)
+	{
+		while (n > 0)
+		{
+			n--;
+			p_dest[n] = p_src[n];
+		}
+	}
+	return (dest);
 }
