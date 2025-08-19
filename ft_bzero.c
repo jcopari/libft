@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 16:14:32 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/23 17:58:51 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/19 14:30:44 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*ptr;
 	size_t			i;
 
+	ptr = s;
+	i = 0;
 	while (i < n)
 	{
 		ptr[i] = '\0';

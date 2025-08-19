@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 15:11:13 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/08/19 17:35:23 by jcopari-         ###   ########.fr       */
+/*   Created: 2025/08/19 12:46:45 by jcopari-          #+#    #+#             */
+/*   Updated: 2025/08/19 13:43:42 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	const unsigned char	*p1;
-	const unsigned char	*p2;
-	size_t				i;
+	char	*ptr;
+	size_t	s_len;
+	size_t	i;
 
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		len = 0;
+	else if (len > s_len - start)
+		len = s_len - start;
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
 	i = 0;
-	p1 = (const unsigned char *)s1;
-	p2 = (const unsigned char *)s2;
-	while (i < n)
+	while (i < len)
 	{
-		if (p1[i] != p2[i])
-			return (p1[i] - p2[i]);
+		ptr[i] = s[start + i];
 		i++;
 	}
-	return (0);
+	ptr[i] = '\0';
+	return (ptr);
 }

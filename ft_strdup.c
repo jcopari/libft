@@ -6,23 +6,13 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 18:53:23 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/28 17:27:29 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/19 13:04:24 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t		i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char *dest, const char *src)
+static	char	*ft_strcpy(char *dest, const char *src)
 {
 	size_t	i;
 

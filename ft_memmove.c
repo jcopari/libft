@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 14:39:17 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/08/05 15:42:11 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:07:39 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*p_dest;
-	const char		*p_src;
-	size_t			i;
+	const unsigned char		*p_src;
+	unsigned char			*p_dest;
+	size_t					i;
 
 	i = 0;
 	p_dest = (unsigned char *)dest;
