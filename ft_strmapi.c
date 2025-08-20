@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 12:47:06 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/08/19 14:01:32 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/20 13:41:07 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	s_len = ft_strlen(s);
 	new_string = malloc(s_len + 1);
+	if (new_string == NULL)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

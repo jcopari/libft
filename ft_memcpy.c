@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 17:21:05 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/07/23 18:07:43 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/20 13:37:44 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*p_dest;
 	size_t				i;
 
+	if (dest == NULL && src == NULL)
+		return (dest);
 	i = 0;
 	p_src = (const unsigned char *)src;
 	p_dest = (unsigned char *)dest;
