@@ -6,7 +6,7 @@
 /*   By: jcopari- <jcopari-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 16:06:14 by jcopari-          #+#    #+#             */
-/*   Updated: 2025/08/19 14:49:23 by jcopari-         ###   ########.fr       */
+/*   Updated: 2025/08/20 15:28:50 by jcopari-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *str, void (*f)(unsigned int, char*));
 
-#endif 
+#endif
